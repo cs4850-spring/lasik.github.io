@@ -1,0 +1,47 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css">
+
+<body>
+<center><h1>Welcome to our Mockup GUI</h1></center>
+<center><h3>Please insert a single line of code in this text box here</h3></center>
+</br>
+
+<div id="Buttons">
+<input type="button" class="button button1"id="Tbutton" onclick="generateCode()" value="Translate">
+<input type="button" class="button button2" id="Sbutton" onclick="save();" value="Save">
+<input type="button" class="button button3" id="Lbutton" value="Load">
+<input type="button" class="button button4" id="SAsbutton" value="Save As...">
+</div>
+
+<div id="TextAreaJava">
+<label for="Java_Code" id="J_CodeLabel">Insert Java Code Here</label>
+</br>
+
+<textarea id="Java_Code" name="jcode" rows="20" cols="70" style="overflow:scroll;">
+</textarea>
+</div>
+
+<div id="TextAreaTranslate">
+<label for="Translate_Code" id="T_CodeLabel">Translated Statement</label>
+</br>
+
+<textarea id="Translate_Code" name="tcode" rows="20" cols="70" style="overflow:scroll;" readonly>
+</textarea>
+</div>
+</br>
+<div id="StatusMessage">
+
+</br>
+
+
+</div>
+
+
+
+
+<script src="guijs.js"></script>
+</head>
+</body>
+</html>
