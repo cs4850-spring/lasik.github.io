@@ -8,7 +8,8 @@ var generateCode = () =>
 	var input_code = inputWindow.value;
 	fetch(generationURL, 
 	{
-		method: "POST", 
+		method: 'POST', 
+		mode: 'no-cors',
 		body: input_code
 	}).then((response) => 
 	{
