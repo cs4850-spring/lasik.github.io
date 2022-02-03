@@ -1,7 +1,7 @@
 var outputWindow = document.getElementById("Translate_Code");
 var inputWindow = document.getElementById("Java_Code");
 
-const generationURL = "http://lasik.michaelepps.me:8080/parse";
+const generationURL = "http://api.michaelepps.me:8080/parse";
 
 var generateCode = () => 
 {
