@@ -6,7 +6,7 @@ const generationURL = "http://api.lasik.michaelepps.me:8080/parse";
 var generateCode = () => {
 	var input_code = inputWindow.value;
 	fetch(generationURL, {
-		method: 'PUT', 
+		method: 'POST', 
 		body: input_code
 	}).then((response) => {
 		return response.json();		
