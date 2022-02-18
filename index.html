@@ -1,32 +1,40 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-
-        <center><h1>Welcome to our Mockup GUI</h1></center>
-        <center><h3>Please insert a single line of code in this text box here</h3></center>
+	
+		
+		<nav id="topnav">
+		    <header><h3>LASIK Translator</h3></header>
+		        <a class="active" href="index.html">Home</a>
+		        <a href="#news">News</a>
+		        <a href="#contact">Contact</a>
+		        <a href="#about">About</a>
+		</nav>
     </head>
 
     <body>
         <div id="Buttons">
-            <input type="button" class="button button1"id="Tbutton" onclick="generateCode()" value="Translate">
-            <input type="button" class="button button2" id="Sbutton" onclick="save();" value="Save">
+            <input type="button" class="button button1"id="Tbutton" onclick="showSnackbar(); generateCode();" value="Translate">
+            <input type="button" class="button button2" id="Sbutton" value="Save">
             <input type="button" class="button button3" id="Lbutton" value="Load">
-            <input type="button" class="button button4" id="SAsbutton" value="Save As...">
+            <input type="button" class="button button4" id="SAsbutton" " value="Save As">
         </div>
 
         <div id="TextAreaJava">
             <label for="Java_Code" id="J_CodeLabel">Insert Java Code Here</label>
             </br>
 
-            <textarea id="Java_Code" name="jcode" rows="20" cols="70" style="overflow:scroll;"></textarea>
+            <textarea id="Java_Code" name="jcode" rows="100" cols="70" ></textarea>
         </div>
 
         <div id="TextAreaTranslate">
-            <label for="Translate_Code" id="T_CodeLabel">Translated Statement</label>
+            <label for="Translate_Code" id="T_CodeLabel">C# Translation</label>
             </br>
 
-            <textarea id="Translate_Code" name="tcode" rows="20" cols="70" style="overflow:scroll;" readonly></textarea>
+            <textarea id="Translate_Code" name="tcode" rows="100" cols="70" readonly></textarea>
         </div>
+		
+		<div id="snackbar">Translation in progress</div>
 
     </body>
 
