@@ -6,18 +6,18 @@
 		<nav id="topnav">
 		<header><h3>LASIK Translator</h3></header>
 		<a class="active" href="index.html">Home</a>
-		<a href="#news">News</a>
 		<a href="#contact">Contact</a>
-		<a href="#about">About</a>
+		<a href="#about">Current Limitations</a>
 		</nav>
     </head>
 
     <body>
         <div id="Buttons">
+	    <input type="file" id="files" name="files[]"/>
             <input type="button" class="button button1"id="Tbutton" onclick="showSnackbar(); generateCode();" value="Translate">
             <input type="button" class="button button2" id="Sbutton" value="Save">
-            <input type="button" class="button button3" id="Lbutton" value="Load">
-            <input type="button" class="button button4" id="SAsbutton" onclick= "saveFileAs()" value="Save As">
+    	    <input type="button" class="button button3" id="Lbutton" onclick="Load()"value="Load">
+            <input type="button" class="button button4" id="SAsbutton" onclick= "saveAs_Translate()" value="Save As">
         </div>
 		
 		
