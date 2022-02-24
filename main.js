@@ -25,4 +25,16 @@ var generateCode = () => {
 	})
 }
 
+function saveFileAs() {
+	if (promptFilename = prompt("Save file as", "")) {
+		var textBlob = new Blob([document.getElementById("Translate_Code").value], {type:'text/plain'});
+		var downloadLink = document.createElement("a");
+		downloadLink.download = promptFilename;
+		downloadLink.innerHTML = "Download File";
+		downloadLink.href = window.URL.createObjectURL(textBlob);
+		downloadLink.click();
+    delete downloadLink;
+    delete textBlob;
+	}
+}
 
