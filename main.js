@@ -25,7 +25,7 @@ var generateCode = () => {
 	})
 }
 
-function saveFileAs() {
+function saveAs_Translate() {
 	if (promptFilename = prompt("Save file as", "")) {
 		var textBlob = new Blob([document.getElementById("Translate_Code").value], {type:'text/plain'});
 		var downloadLink = document.createElement("a");
@@ -38,3 +38,34 @@ function saveFileAs() {
 	}
 }
 
+function handleFileSelecting(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+        var reader = new FileReader();
+
+        // Closure to capture the file information.
+        reader.onload = (function(theFile) {
+            return function(e) {
+
+                var content = e.target.result;
+                if (content) {
+                    // Inserting content into textarea, change id if you need
+                    var textarea = document.getElementById('Java_Code');
+                    textarea.innerHTML = content;
+
+                }
+            };
+        })(f);
+
+        reader.readAsText(f);
+    }
+}
+
+function Load() {
+    var filesElem = document.getElementById('files');
+    filesElem.addEventListener('change', handleFileSelecting, false);
+    filesElem.click();
+}
