@@ -4,11 +4,11 @@
 	
 		
 		<nav id="topnav">
-		    <header><h3>LASIK Translator</h3></header>
-		        <a class="active" href="index.html">Home</a>
-		        <a href="#news">News</a>
-		        <a href="#contact">Contact</a>
-		        <a href="#about">About</a>
+		<header><h3>LASIK Translator</h3></header>
+		<a class="active" href="index.html">Home</a>
+		<a href="#news">News</a>
+		<a href="#contact">Contact</a>
+		<a href="#about">About</a>
 		</nav>
     </head>
 
@@ -17,14 +17,17 @@
             <input type="button" class="button button1"id="Tbutton" onclick="showSnackbar(); generateCode();" value="Translate">
             <input type="button" class="button button2" id="Sbutton" value="Save">
             <input type="button" class="button button3" id="Lbutton" value="Load">
-            <input type="button" class="button button4" id="SAsbutton" " value="Save As">
+            <input type="button" class="button button4" id="SAsbutton" onclick= "saveFileAs()" value="Save As">
         </div>
+		
+		
 
         <div id="TextAreaJava">
             <label for="Java_Code" id="J_CodeLabel">Insert Java Code Here</label>
             </br>
 
             <textarea id="Java_Code" name="jcode" rows="100" cols="70" ></textarea>
+			</br>
         </div>
 
         <div id="TextAreaTranslate">
@@ -32,6 +35,7 @@
             </br>
 
             <textarea id="Translate_Code" name="tcode" rows="100" cols="70" readonly></textarea>
+			</br>
         </div>
 		
 		<div id="snackbar">Translation in progress</div>
