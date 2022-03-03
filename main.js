@@ -15,7 +15,9 @@ var generateCode = () => {
 		method: 'POST', 
 		body: input_code
 	}).then((response) => {
-		outputWindow.value = response.text();
+		return response.text();		
+	}).then((data) => {
+		outputWindow.value = data;
 		alert("Translation has been completed");
 	}).catch((error) => {
 		outputWindow.value = error;
