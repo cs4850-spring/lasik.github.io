@@ -15,9 +15,9 @@ var generateCode = () => {
 		method: 'POST', 
 		body: input_code
 	}).then((response) => {
-		return response.json();		
-	}).then((json) => {
-		outputWindow.value = JSON.stringify(json, null, 2);
+		return response.arrayBuffer;		
+	}).then((data) => {
+		outputWindow.value = data.toString();
 		alert("Translation has been completed");
 	}).catch((error) => {
 		outputWindow.value = error;
