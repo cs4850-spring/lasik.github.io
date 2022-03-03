@@ -70,7 +70,7 @@ var saveInput = () => {
  }
 
 var saveTextAsFile = (fileExtension, text) => {
-    if (promptFilename = prompt(`Save file as *.${fileExtension}`, "")) {
+    if (promptFilename = prompt(`Save file as *${fileExtension}`, "")) {
         text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
 
         var blob = new Blob([text], { type: "text/plain"});
