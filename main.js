@@ -16,7 +16,7 @@ var outputEditor = CodeMirror.fromTextArea(outputText, {
 inputEditor.setSize("100%", "100vh");
 outputEditor.setSize("100%", "100vh")
 
-const generationURL = "https://localhost:7193/parse";
+const generationURL = "http://api.lasik.michaelepps.me:8081/parse";
 
 function showSnackbar() {
   var x = document.getElementById("snackbar");
