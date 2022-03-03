@@ -1,27 +1,29 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-	
+		
+		<div class="header">
+			<h3>LASIK Translator</h3>
+		</div>
 		
 		<nav id="topnav">
-		<header><h3>LASIK Translator</h3></header>
 		<a class="active" href="index.html">Home</a>
-		<a href="#contact">Contact</a>
-		<a href="#about">Current Limitations</a>
+		<a href="contact.html">Contact</a>
+		<a href="limitations.html">Current Limitations</a>
 		</nav>
     </head>
 
     <body>
+	
         <div id="Buttons">
-	    <input type="file" id="files" name="files[]"/>
+		
+			<input type="file" id="files" name="files[]"/>
             <input type="button" class="button button1"id="Tbutton" onclick="showSnackbar(); generateCode();" value="Translate">
-            <input type="button" class="button button2" id="Sbutton" value="Save">
-    	    <input type="button" class="button button3" id="Lbutton" onclick="Load()"value="Load">
+            <input type="button" class="button button2" id="Sbutton" onclick="save_JavaCode()" value="Save">
+            <input type="button" class="button button3" id="Lbutton" onclick="Load()"value="Load">
             <input type="button" class="button button4" id="SAsbutton" onclick= "saveAs_Translate()" value="Save As">
         </div>
 		
-		
-
         <div id="TextAreaJava">
             <label for="Java_Code" id="J_CodeLabel">Insert Java Code Here</label>
             </br>
