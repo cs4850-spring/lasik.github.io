@@ -15,8 +15,11 @@ var generateCode = () => {
 		method: 'POST', 
 		body: input_code
 	}).then((response) => {
+        console.log(response);
 		return response.arrayBuffer;		
 	}).then((data) => {
+        console.log(data);
+
 		outputWindow.value = data.toString();
 		alert("Translation has been completed");
 	}).catch((error) => {
