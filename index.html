@@ -1,46 +1,51 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-		
-		<div class="header">
-			<h3>LASIK Translator</h3>
-		</div>
-		
-		<nav id="topnav">
-		<a class="active" href="index.html">Home</a>
-		<a href="contact.html">Contact</a>
-		<a href="limitations.html">Current Limitations</a>
-		</nav>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" integrity="sha512-uf06llspW44/LZpHzHT6qBOIVODjWtv4MxCricRxkzvopAlSWnTf6hpZTFxuuZcuNE9CBQhqE0Seu1CoRk84nQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js" integrity="sha512-xwrAU5yhWwdTvvmMNheFn9IyuDbl/Kyghz2J3wQRDR8tyNmT8ZIYOd0V3iPYY/g4XdNPy0n/g0NvqGu9f0fPJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js" integrity="sha512-xwrAU5yhWwdTvvmMNheFn9IyuDbl/Kyghz2J3wQRDR8tyNmT8ZIYOd0V3iPYY/g4XdNPy0n/g0NvqGu9f0fPJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="http://codemirror.net/mode/clike/clike.js"></script>
     </head>
 
     <body>
+        <header>            
+            <nav class="navbar">
+                <h3 id="title" href="index.html">LASIK Translator</h3>
+
+                <a class="active" href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="limitations.html">Current Limitations</a>
+            </nav>
+        </header>
 	
-        <div id="Buttons">
-		
-			<input type="file" id="files" name="files[]"/>
-            <input type="button" class="button button1"id="Tbutton" onclick="showSnackbar(); generateCode();" value="Translate">
-            <input type="button" class="button button2" id="Sbutton" onclick="save_JavaCode()" value="Save">
-            <input type="button" class="button button3" id="Lbutton" onclick="Load()"value="Load">
-            <input type="button" class="button button4" id="SAsbutton" onclick= "saveAs_Translate()" value="Save As">
-        </div>
-		
-        <div id="TextAreaJava">
-            <label for="Java_Code" id="J_CodeLabel">Insert Java Code Here</label>
-            </br>
 
-            <textarea id="Java_Code" name="jcode" rows="100" cols="70" ></textarea>
-			</br>
-        </div>
-
-        <div id="TextAreaTranslate">
-            <label for="Translate_Code" id="T_CodeLabel">C# Translation</label>
-            </br>
-
-            <textarea id="Translate_Code" name="tcode" rows="100" cols="70" readonly></textarea>
-			</br>
-        </div>
 		
-		<div id="snackbar">Translation in progress</div>
+        <div class="content">
+            <div class="code-pane">
+                <div class="code-pane-header">
+                    <h2 class="code-pane-title">Insert Java Code Here</h2>
+                    <div class="code-pane-buttons">
+                        <button class="code-pane-button" onclick="loadInputFile()">Load</button>
+                        <input type="file" id="input-file" name="file-input"/>
+
+                        <button class="code-pane-button" onclick="saveInput()">Save</button>
+                        <button class="code-pane-button" onclick="translateCode()">Translate</button>
+                    </div>
+                </div>
+                <textarea class="code-pane-textarea" id="input-text"></textarea>
+            </div>
+
+            <div class="code-pane">
+                <div class="code-pane-header">
+                    <h2 class="code-pane-title">Translated C# Code</h2>
+                    <div class="code-pane-buttons">
+                        <button class="code-pane-button" onclick="saveOutput()">Save</button>
+                    </div>
+                </div>
+                <textarea class="code-pane-textarea" id="output-text"></textarea>
+            </div>
+        </div>
+
+		<div id="snackbar">Translation in progress</div> 
 
     </body>
 
