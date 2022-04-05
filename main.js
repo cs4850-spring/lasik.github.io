@@ -18,12 +18,6 @@ outputEditor.setSize("100%", "100vh")
 
 const generationURL = "http://api.lasik.michaelepps.me:8081/parse";
 
-function showSnackbar() {
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
-
 var translateCode = () => {	  
 	fetch(generationURL, {
 		method: 'POST', 
