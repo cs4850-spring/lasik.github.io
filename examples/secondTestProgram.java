@@ -13,9 +13,11 @@ public class secondTestProgram {
 
     public static void twoDimArray() {
         // Initialize m: [{1.0, -2.0, 3.0, -4.0},{2.0, -4.0, 6.0, -8.0},{3.0, -6.0, 9.0, -12.0}]
-        double[][] m = new double[3][4];
-        for (int r = 0; r < m.length; r++) {
-            for (int c = 0; c < m[0].length; c++) {
+        var rows = 3;
+      	var cols = 4;
+      	double[][] m = new double[rows][cols];
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
                 m[r][c] = (r + 1.0) * (c + 1.0);
                 if (c % 2 == 1) {
                     m[r][c] *= -1;
