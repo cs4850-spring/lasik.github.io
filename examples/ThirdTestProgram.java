@@ -26,7 +26,7 @@ class ExampleProgramThree {
         }
 
         public void speak() {
-            System.out.println("Woof!");
+            System.out.println("Woof! I am a " + super.name);
         }
     }
 
@@ -41,7 +41,7 @@ class ExampleProgramThree {
         }
 
         public void speak() {
-            System.out.println("Meow!");
+            System.out.println("Meow!  I am a " + super.name);
         }
     }
 
