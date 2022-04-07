@@ -1,82 +1,79 @@
-using System;
+class ExampleProgramThree {
 
-class ExampleProgramThree
-{
-    public interface Speaker
-    {
-        void Speak();
+    public static interface Speaker {
+        public void speak();
     }
 
-    public abstract class Animal : Speaker
-    {
-        public String Name;
-        public Animal(String name)
-        {
-            this.Name = name;
+    public abstract static class Animal implements Speaker {
+        public String name;
+
+        public Animal(String name) {
+            this.name = name;
         }
 
-        public virtual int WalkingSpeed()
-        {
+        public int walkingSpeed() {
             return 5;
         }
 
-        public abstract void Speak();
+        public abstract void speak();
     }
 
-    public class Dog : Animal
-    {
-        public Dog() : base("dog")
-        {
+
+    public static class Dog extends Animal {
+
+        public Dog() {
+            super("dog");
         }
 
-        public override void Speak()
-        {
-            Console.WriteLine("Woof!");
-        }
-    }
-
-    public class Cat : Animal
-    {
-        public Cat() : base("cat")
-        {
-        }
-
-        public override void Speak()
-        {
-            Console.WriteLine("Meow!");
-        }
-
-        public override int WalkingSpeed()
-        {
-            return base.WalkingSpeed() * 2;
+        public void speak() {
+            System.out.println("Woof!");
         }
     }
 
-    public class Replicator : Speaker
-    {
-        public String Sound;
-        public Replicator(String sound)
-        {
-            this.Sound = sound;
+    public static class Cat extends Animal {
+
+        public Cat() {
+            super("cat");
         }
 
-        public void Speak()
-        {
-            Console.WriteLine(this.Sound);
+        public int walkingSpeed() {
+            return super.walkingSpeed() * 2;
+        }
+
+        public void speak() {
+            System.out.println("Meow!");
         }
     }
 
-    public static void Main(String[] args)
-    {
+    public static class Replicator implements Speaker {
+        public String sound;
+
+        public Replicator(String sound) {
+            this.sound = sound;
+        }
+
+        public void speak() {
+            System.out.println(this.sound);
+        }
+    }
+
+
+    public static void main(String[] args) {
         Dog dog = new Dog();
-        dog.Speak();
+        dog.speak();
+
         Animal animal = dog;
-        animal.Speak();
-        Console.WriteLine("The current animal has a walking speed of: " + animal.WalkingSpeed());
+        animal.speak();
+
+        System.out.println("The current animal has a walking speed of: " + animal.walkingSpeed());
+
         animal = new Cat();
-        animal.Speak();
-        Console.WriteLine("The current animal has a walking speed of: " + animal.WalkingSpeed());
+        animal.speak();
+
+        System.out.println("The current animal has a walking speed of: " + animal.walkingSpeed());
+
+
         Speaker speaker = new Replicator("I AM A CAT. MEOW!");
-        speaker.Speak();
+        speaker.speak();
     }
 }
