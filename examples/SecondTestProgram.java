@@ -1,8 +1,52 @@
 // Java Test Program #2
-// Paradigms: Arrays, Multi-D Arrays, For loops, try catch finally, exceptions
+// Paradigms: Assignment, operators, if statements, Arrays, Multi-D Arrays, For loops, try catch finally, exceptions
 
-class ExampleProgramTwo {
+public class ExampleProgramTwo {
+  
+  	// Basic types
+ 	public boolean bot = true;
+    public boolean bof = false;
+    public double d = 2.1;
+    //public float fl = 4.3f; Currently bugged, will be fixed in polish
+    public int in = 10;
+    public long lo = 10L;
+    public byte by = 123;
+    public short sh = 432;
+    public char ch = 'c';
+    public String st = "test";
+    public String fooNull = null;
+
+  	// Equality operators
+    public boolean l = 5 < 6;
+    public boolean  g = 5 > 6;
+    public boolean le = 5 <= 6;
+    public boolean ge = 5 >= 6;
+    public boolean e = 5 == 6;
+    public boolean ne = 5 != 6;
+    public boolean and = true && false;
+    public boolean or = true || false;
+
+  	// Arithmetic operators
+    public int add = 5 + 6;
+    public int sub = 5 - 6;
+    public int mult = 5 * 6;
+    public int div = 5 / 6;
+    public int mod = 5 % 6;
+
+  	// Shift operators
+    public int lshift = 5 << 6;
+    public int rshift = 5 >> 6;
+
+  	// Bitwise operators
+    public int xor = 5 ^ 6;
+    public int bor = 5 | 6;
+    public int band = 5 & 6;
+
+
+ 
+
     public static void main(String[] args) {
+      	compoundAssignments();
 
         // We can assign returned values 
         String[] words = createWords();
@@ -21,8 +65,46 @@ class ExampleProgramTwo {
             System.out.println("Finally done!");
         }
     }
+  
+  	public static void compoundAssignments() {
+       int baz = 5;
+      
+       // Compound Assignments
+       baz += 10; 
+       baz -= 10; 
+       baz *= 10; 
+       baz /= 10; 
+       baz %= 10; 
+       baz >>= 10; 
+       baz <<= 10; 
+       baz ^= 10; 
 
-    public static String[] createWords() {
+       baz |= 10; 
+       baz &= 10; 
+      
+       // Unary Operators
+  	   int neg = -2;
+       int comp = ~6;
+       int lpp = ++neg;
+       int lmm = --neg;
+       int rpp = neg++;
+       int rmm = neg--;
+      
+       System.out.println("Baz before if: " + baz);
+       if (baz >= 5) {
+         baz = 8;
+       } else if (baz >= 8) {
+         baz = 4;
+       } else if (baz < 4) {
+         baz = 3;
+       } else {
+         baz = 0;
+       } 
+      
+       System.out.println("Baz after if: " + baz);
+    }
+  
+  	public static String[] createWords() {
         // We can initialize arrays using the new syntax
         String[] empty = new String[10];
 
