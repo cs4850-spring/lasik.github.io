@@ -15,6 +15,6 @@ public class firstTestProgram {
          }
       }
       v += n;
-      // System.out.println(v);
+      System.out.println(v);
    }
 }
