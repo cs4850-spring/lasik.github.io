@@ -55,6 +55,7 @@ inputFile.onchange = (e) => {
 
 var clearInput = () => {
 	inputEditor.setValue('');
+	outputEditor.setValue('');
 }
 
 var saveOutput = () => {
