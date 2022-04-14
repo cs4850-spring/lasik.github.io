@@ -53,6 +53,10 @@ inputFile.onchange = (e) => {
     e.target.value = '';
 }
 
+var clearInput = () => {
+	inputEditor.setValue('');
+}
+
 var saveOutput = () => {
     var text = outputEditor.getValue();
     saveTextAsFile(".cs", text);
