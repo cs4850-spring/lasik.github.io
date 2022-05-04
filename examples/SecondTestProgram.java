@@ -112,12 +112,12 @@ public class ExampleProgramTwo {
        System.out.println("Baz after if: " + baz);
     }
   
-    private static void ignore(int i) {}
+    private static void ignore(object o) {}
   
   	public static String[] createWords() {
         // We can initialize arrays using the new syntax
         String[] empty = new String[10];
-
+        ignore(empty);
         // Or we can initialize arrays with the literal syntax
         String[] words = { "cs4850", "is", "a", "", "class" };
 
