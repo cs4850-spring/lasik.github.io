@@ -1,4 +1,4 @@
-public class fifthTestProgram {
+public class FifthTestProgram {
     public static void main(String[] args) {
         LinkedList<Integer> il = new LinkedList<Integer>();
         il.addFirst(20);
@@ -41,7 +41,7 @@ public class fifthTestProgram {
         System.out.println();
     }
 
-    public class Node<T> {
+    public static class Node<T> {
         private T value;
         private Node<T> next;
         private Node<T> prev;
@@ -60,35 +60,35 @@ public class fifthTestProgram {
         public void setPrev(Node<T> p) {this.prev = p;}
     }
 
-    public class IntegerNode extends Node<Integer> {
+    public static class IntegerNode extends Node<Integer> {
         public IntegerNode(int i) {
             super(i);
         }
     }
 
-    public interface ExampleInterface {}
+    public static interface ExampleInterface {}
 
-    public class ConstrainedNode<T extends ExampleInterface> extends Node<T> {
+    public static class ConstrainedNode<T extends ExampleInterface> extends Node<T> {
         public ConstrainedNode(T t) {
             super(t);
         }
     } 
 
-    public abstract class ExampleAbstractClass {}
+    public static abstract class ExampleAbstractClass {}
 
-    public class MultipleConstraintsNode<T extends ExampleAbstractClass & ExampleInterface> extends Node<T> {
-        public ConstrainedNode(T t) {
+    public static class MultipleConstraintsNode<T extends ExampleAbstractClass & ExampleInterface> extends Node<T> {
+        public MultipleConstraintsNode(T t) {
             super(t);
         }
     }     
 
-    public class MultipleTypeParametersNode<T, K, M extends ExampleInterface, L extends ExampleAbstractClass> extends Node<T> {
+    public static class MultipleTypeParametersNode<T, K, M extends ExampleInterface, L extends ExampleAbstractClass> extends Node<T> {
         public MultipleTypeParametersNode(T t) {
             super(t);
         }
     }
 
-    public  class LinkedList<T> {
+    public static class LinkedList<T> {
         private int length = 0;
         public Node<T> head;
         public Node<T> tail;
@@ -183,6 +183,3 @@ public class fifthTestProgram {
         }
     }
 }
-
-
-
