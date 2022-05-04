@@ -112,7 +112,7 @@ public class ExampleProgramTwo {
        System.out.println("Baz after if: " + baz);
     }
   
-    private static void ignore(object o) {}
+    private static void ignore(Object o) {}
   
   	public static String[] createWords() {
         // We can initialize arrays using the new syntax
