@@ -1,4 +1,4 @@
-public class test {
+public class ForthTestProgram {
 
     public static int DayOfWeek = 0;
 
